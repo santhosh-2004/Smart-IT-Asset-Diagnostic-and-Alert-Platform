@@ -1,0 +1,35 @@
+SCHNEIDER FACTORY PC MONITORING - WINDOWS INSTRUCTIONS
+================================================================
+
+You are helping test a factory PC monitoring system. Your Windows PC will send data to a central server.
+
+STEP 1: SETUP YOUR PC SCRIPT
+1. Copy the PowerShell file (.ps1) I sent you to your Desktop
+2. Right-click the file and select "Edit" or open with Notepad
+3. Find this line: $SERVER_URL = "http://localhost:3001/api/pc/update"
+4. Change "localhost" to the IP address I give you (e.g., "192.168.1.100")
+5. Save the file
+
+STEP 2: RUN THE SCRIPT
+1. Right-click on the PowerShell file (.ps1)
+2. Select "Run with PowerShell"
+3. OR open PowerShell and navigate to Desktop:
+   - Press Windows + R, type "powershell", press Enter
+   - Type: cd Desktop
+   - Type: .\YOUR_SCRIPT_NAME.ps1
+4. You should see: "Data sent successfully for pc-xxx-x"
+
+STEP 3: KEEP IT RUNNING
+- Keep the PowerShell window open
+- The script will send data every 30 seconds
+- Press Ctrl+C to stop when done
+
+TROUBLESHOOTING:
+- If you get "Execution Policy" error:
+  - Open PowerShell as Administrator
+  - Type: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+  - Type: Y and press Enter
+- If you get connection errors: Check the IP address in the script
+- If PowerShell won't open: Try Command Prompt instead
+
+QUESTIONS? Contact me for help! 

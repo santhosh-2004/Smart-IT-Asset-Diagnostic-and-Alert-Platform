@@ -1,0 +1,37 @@
+SCHNEIDER FACTORY PC MONITORING - INSTRUCTIONS FOR FRIENDS
+================================================================
+
+You are helping test a factory PC monitoring system. Your PC will send data to a central server.
+
+STEP 1: INSTALL PYTHON
+- Download Python from: https://www.python.org/downloads/
+- During installation, CHECK "Add Python to PATH"
+
+STEP 2: INSTALL REQUIRED PACKAGES
+Open Command Prompt (cmd) and type:
+pip install requests psutil
+
+STEP 3: SETUP YOUR PC SCRIPT
+1. Copy the Python file I sent you to your Desktop
+2. Right-click the file and select "Edit" or open with Notepad
+3. Find this line: SERVER_URL = "http://localhost:3001/api/pc/update"
+4. Change "localhost" to the IP address I give you (e.g., "192.168.1.100")
+5. Save the file
+
+STEP 4: RUN THE SCRIPT
+1. Open Command Prompt (cmd)
+2. Navigate to Desktop: cd Desktop
+3. Run: python YOUR_SCRIPT_NAME.py
+4. You should see: "Data sent successfully for pc-xxx-x"
+
+STEP 5: KEEP IT RUNNING
+- Keep the Command Prompt window open
+- The script will send data every 30 seconds
+- Press Ctrl+C to stop when done
+
+TROUBLESHOOTING:
+- If you get "pip not found": Reinstall Python and check "Add to PATH"
+- If you get connection errors: Check the IP address in the script
+- If you get import errors: Run "pip install requests psutil" again
+
+QUESTIONS? Contact me for help! 
